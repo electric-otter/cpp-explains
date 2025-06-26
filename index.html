@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Understanding C++: A Basic Guide</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2, h3, h4 { color: #333; }
+        b { font-weight: bold; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        p { margin-bottom: 10px; }
+        .section { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .example-code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding C++: A Basic Guide</h1>
+
+    <div class="section">
+        <h2>Introduction to C++</h2>
+        <p>
+            C++ is a **high-level programming language** that was developed in 1983 by Bjarne Stroustrup at Bell Labs [1]. It is used for developing various applications [1]. This guide provides an overview of its fundamental concepts.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Basic Structure of C++ Programs</h2>
+        <p>
+            A C++ program typically includes header files, uses the `std` namespace, and has a `main` function [2]. The `main()` function is the starting point of program execution [2].
+        </p>
+        <div class="example-code">
+            // Header files
+            #include &lt;bits/stdc++.h&gt;
+            // std namespace contains
+            // various standard library components
+            using namespace std;
+            // main function is the starting
+            //point of program execution
+            int main ()
+            {
+            // This is the section where
+            // we write code statements
+            return 0;
+            } [2]
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Comments</h2>
+        <p>
+            **Comments** in C++ are used to provide explanations of the code, making it easier for others to understand its functionality [3]. They are not executed by the compiler and can also be used to temporarily disable specific statements without deleting them [3].
+        </p>
+        <p>There are two types of comments [3]:</p>
+        <ul>
+            <li><b>Single-lined:</b> Indicated by two forward slashes `//` [3].
+                <div class="example-code">
+                    // This is a comment [3]
+                </div>
+            </li>
+            <li><b>Multi-lined:</b> Begin with `/*` and end with `*/` [3].
+                <div class="example-code">
+                    /* This is multi-lined comment.
+                    The below statement will print GeeksforGeeks.*/ [3]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Variables</h2>
+        <p>
+            In C++, a **variable** is a container used to store data values [3]. Variables must be declared before they can be used, and multiple variables can be declared at once [3].
+        </p>
+        <ul>
+            <li><b>Naming Rules:</b> A variable name can contain alphabets, digits, and underscores, but it must start with an alphabet or an underscore [3].</li>
+            <li><b>Identifiers:</b> All variables must be given **unique names**, known as identifiers, so each variable can be uniquely identified [4].</li>
+            <li><b>Constants:</b> **Constants** are fixed values that remain unchanged during program execution [4].</li>
+            <li><b>Syntax:</b>
+                <div class="example-code">
+                    // Declaring a single variable
+                    data_type var_name;
+                    // Declaring multiple variables
+                    data_type var1_name, var2_name, var3_name; [4]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Data Types</h2>
+        <p>
+            **Data types** define the kind of data a variable can store [4].
+        </p>
+        <ul>
+            <li><b>Integer (`int`):</b> Used to store integers, typically taking 4 bytes of memory [4].
+                <div class="example-code">
+                    int var = 123; [5]
+                </div>
+            </li>
+            <li><b>Character (`char`):</b> Used to store characters, taking 1 byte of memory [5].
+                <div class="example-code">
+                    char var = 'a'; [5]
+                </div>
+            </li>
+            <li><b>Floating Point (`float`):</b> Used for single-precision floating-point numbers, taking 4 bytes of memory [5].
+                <div class="example-code">
+                    float num = 1.23; [5]
+                </div>
+            </li>
+            <li><b>Double (`double`):</b> Used for double-precision floating-point numbers, taking 8 bytes of memory [5].
+                <div class="example-code">
+                    double num = 1.2345; [5]
+                </div>
+            </li>
+            <li><b>Boolean (`bool`):</b> Used to store logical values, either `true` or `false` [5, 6].
+                <div class="example-code">
+                    bool b = false; [6]
+                </div>
+            </li>
+            <li><b>String (`string`):</b> A collection of characters surrounded by double quotes, used to store words or sentences [6]. It is part of the Standard Library and requires including the `<string>` header file [6].
+                <div class="example-code">
+                    string str = "GeeksforGeeks"; [6]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Input and Output</h2>
+        <ul>
+            <li><b>Input from user:</b> Achieved using `cin` from the `iostream` library [6, 7].
+                <div class="example-code">
+                    int var;
+                    cin >> var; [7]
+                </div>
+            </li>
+            <li><b>Output on the console:</b> Achieved using `cout` from the `iostream` library [7].
+                <div class="example-code">
+                    cout << “Hello World”; [7]
+                </div>
+            </li>
+            <li><b>New Lines:</b> Can be inserted using `\n` character or `endl` [7].
+                <div class="example-code">
+                    cout << "Hello World! \n";
+                    cout << "Hello World!" << endl; [7]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Conditional Statements</h2>
+        <p>
+            **Conditional statements** allow controlling the program's flow based on specific conditions, enabling the execution of particular code sections [7].
+        </p>
+        <ul>
+            <li><b>`if` statement:</b> Executes a block of code only if the given condition is true [8].
+                <div class="example-code">
+                    if (condition) {
+                    // Code to be executed if the condition is true
+                    } [8]
+                </div>
+            </li>
+            <li><b>Nested `if` statement:</b> An `if` statement inside another `if` statement [8].</li>
+            <li><b>`if-else` statement:</b> Executes code in the `if` block if the condition is true, otherwise executes code in the `else` block [8, 9].
+                <div class="example-code">
+                    if (condition) {
+                    // Code to be executed if the condition is true
+                    } else {
+                    // Code to be executed if the condition is false
+                    } [9]
+                </div>
+            </li>
+            <li><b>`else-if` statement:</b> Allows checking for multiple conditions sequentially [9].</li>
+            <li><b>Shorthand `if-else` (Ternary Operator `?:`):</b> A concise way to write `if-else` statements [10].
+                <div class="example-code">
+                    (condition) ? expression1 : expression2; [10]
+                </div>
+            </li>
+            <li><b>`switch` statement:</b> Evaluates an expression and compares its value with various cases, executing the code for the matching case [10, 11].
+                <ul>
+                    <li>The **`break`** keyword exits the switch statement when a case matches [11].</li>
+                    <li>The **`default`** keyword (optional) executes if none of the cases match the expression's value [11].</li>
+                </ul>
+                <div class="example-code">
+                    switch (expression) {
+                    case value1:
+                    // Code to be executed if
+                    // expression matches value1
+                    break;
+                    case value2:
+                    // Code to be executed if
+                    // expression matches value2
+                    break;
+                    // ...
+                    default:
+                    // Code to be executed if
+                    // expression does not match any case
+                    break;
+                    } [11]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Loops</h2>
+        <p>
+            **Loops** are used to repeatedly execute a block of code multiple times [12].
+        </p>
+        <ul>
+            <li><b>`for` Loop:</b> Executes a block of code a fixed number of times [12].
+                <div class="example-code">
+                    for (initialization expr; test expr; update expr) {
+                    // body of the for loop
+                    } [12]
+                </div>
+            </li>
+            <li><b>`while` Loop:</b> Repeatedly executes a block of code as long as the given condition is true [12].
+                <div class="example-code">
+                    while (condition) {
+                    // statements
+                    update_condition;
+                    } [12]
+                </div>
+            </li>
+            <li><b>`do-while` Loop:</b> Executes the block of code at least once, then checks the condition at the end of the loop body [13].
+                <div class="example-code">
+                    do {
+                    // Body of do-while loop
+                    } while (condition); [13]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Arrays</h2>
+        <p>
+            An **array** is a data structure that stores a fixed number of elements of the same data type in contiguous memory locations [13].
+        </p>
+        <ul>
+            <li><b>Syntax:</b> `dataType array_name[size];` [14].</li>
+            <li><b>Multi-Dimensional Arrays:</b> Known as arrays of arrays, they store similar types of data in tabular form [15]. Two-dimensional arrays are the most commonly used [15].
+                <div class="example-code">
+                    data_type array_name[size1][size2]....[sizeN]; [15]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Vectors</h2>
+        <p>
+            **Vectors** are dynamic array-like data structures that store elements of the same data type contiguously and can automatically resize [16]. They are part of the C++ Standard Template Library (STL) and require including the `<vector>` header file [16].
+        </p>
+        <p><b>Commonly used Vector Functions:</b></p>
+        <ul>
+            <li>`push_back()`: Inserts elements at the end [16].</li>
+            <li>`pop_back()`: Removes elements from the end [16].</li>
+            <li>`clear()`: Removes all elements [16].</li>
+            <li>`empty()`: Checks if the vector is empty [16].</li>
+            <li>`at(i)`: Accesses the element at a specified index `i` [16].</li>
+            <li>`front()`: Accesses the first element [16].</li>
+            <li>`back()`: Accesses the last element [16].</li>
+            <li>`erase()`: Removes an element at a specified position [16].</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>References and Pointers</h2>
+        <ul>
+            <li><b>References:</b> Provide an **alias for an existing variable** and are declared using the `&` operator [17].
+                <div class="example-code">
+                    int var = 12;
+                    // A reference variable to var
+                    int &ref = var; [17]
+                </div>
+            </li>
+            <li><b>Pointers:</b> Variables that **store the memory address of another variable** [17]. They are created using the `*` operator and assigned an address using the address-of operator `&` [17].
+                <div class="example-code">
+                    int i = 3;
+                    // A pointer to variable i or "stores the address of i"
+                    int *ptr = &i; [18]
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Functions</h2>
+        <p>
+            **Functions** are reusable blocks of statements that perform a specific task, providing code reusability and modularity to a program [18, 19].
+        </p>
+        <ul>
+            <li><b>Syntax for Function Declaration:</b> `return_type function_name(parameters);` [18].</li>
+            <li><b>Syntax for Function Definition:</b> Contains the actual statements to be executed when the function is called [18, 20].
+                <div class="example-code">
+                    return_type function_name(parameters) {
+                    // function body
+                    // code to be executed
+                    // return statement (if applicable)
+                    } [18]
+                </div>
+            </li>
+            <li><b>Function Call:</b> Invokes the function by providing arguments [21]. A function call must always be after either function definition or function prototype [20].
+                <div class="example-code">
+                    function_name(arguments); [22]
+                </div>
+            </li>
+            <li><b>Return Type:</b> The data type of the optional value returned by the function; only one value can be returned [20, 21].</li>
+            <li><b>Parameters:</b> The input data passed to the function by the caller [20, 21].</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>String Functions</h2>
+        <p>
+            C++'s Standard Template Library provides several functions for string manipulation [23].
+        </p>
+        <ul>
+            <li><b>`length()`:</b> Returns the length of a string [23].</li>
+            <li><b>`substr(pos, len)`:</b> Extracts a substring from a given string, starting at `pos` with `len` length [24].</li>
+            <li><b>`append()`:</b> Appends a string to the end of another string [25].</li>
+            <li><b>`compare()`:</b> Compares two strings lexicographically [25].</li>
+            <li><b>`empty()`:</b> Checks if a string is empty [26].</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Math Functions</h2>
+        <p>
+            The C++ Standard Library also includes common math functions [27].
+        </p>
+        <ul>
+            <li>`min(x, y)`: Returns the minimum value of x and y [27].</li>
+            <li>`max(x, y)`: Returns the maximum value of x and y [27].</li>
+            <li>`sqrt(x)`: Returns the square root of x [27].</li>
+            <li>`ceil(x)`: Rounds up the value x to its nearest integer [27].</li>
+            <li>`floor(x)`: Rounds the value of x downwards to the nearest integer [27].</li>
+            <li>`pow(x, n)`: Returns the value x raised to the power of n [27].</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Object-Oriented Programming (OOP)</h2>
+        <p>
+            **Object-oriented programming** generally involves storing data in the form of **classes and objects** [28].
+        </p>
+        <ul>
+            <li><b>Class:</b> A user-defined data type that contains its data members and member functions; it acts as a blueprint for objects with similar attributes and behavior [28].</li>
+            <li><b>Objects:</b> An instance or a variable of a class [28].</li>
+        </ul>
+        <h3>Pillars of OOPs:</h3>
+        <ul>
+            <li><b>Encapsulation:</b> Wrapping up data and methods together within a single entity [28]. In C++, classes are used for encapsulation [28].</li>
+            <li><b>Abstraction:</b> Showing only necessary details while hiding internal implementation details [29].</li>
+            <li><b>Inheritance:</b> Deriving properties from a **Parent class** to a **Child class** for code reusability [29, 30].
+                <p>Types of Inheritance [29, 31]:</p>
+                <ul>
+                    <li><b>Single Inheritance:</b> A derived class inherits from a single base class [29, 31].</li>
+                    <li><b>Multiple Inheritance:</b> A derived class inherits from multiple base classes [29, 31].</li>
+                    <li><b>Multilevel Inheritance:</b> A derived class inherits from another derived class [29, 31].</li>
+                    <li><b>Hierarchical Inheritance:</b> More than one derived class inherits from a single base class [29, 31].</li>
+                    <li><b>Hybrid (Virtual) Inheritance:</b> Combines more than one type of inheritance [29, 31].</li>
+                </ul>
+            </li>
+            <li><b>Polymorphism:</b> Providing different functionalities to functions or operators with the same name [30].
+                <p>C++ offers two types of polymorphism [30]:</p>
+                <ul>
+                    <li><b>Compile-time Polymorphism:</b> Achieved using Operator overloading and Function overloading [30].</li>
+                    <li><b>Runtime Polymorphism:</b> Achieved using Function overriding and Virtual Functions [30].</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>File Handling</h2>
+        <p>
+            **File handling** in C++ involves reading data from a file and manipulating it [32].
+        </p>
+        <p><b>File Handling Operations:</b></p>
+        <ul>
+            <li><b>Open a file:</b> Using the `open()` member function of the `ofstream` class [32].</li>
+            <li><b>Read a file:</b> Using the `getline()` member function of the `ifstream` class [32].</li>
+            <li><b>Write to a file:</b> Using the `<<` operator with an `ofstream` object [32].</li>
+        </ul>
+    </div>
+
+</body>
+</html>
